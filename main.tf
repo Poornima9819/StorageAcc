@@ -19,3 +19,12 @@ resource "azurerm_resource_group" "RG1" {
   name     = "DevOps-Test-RG"
   location = "West Europe"
 }
+
+resource "azurerm_storage_account" "SG1" {
+  name = "DevOps-SG"
+  resource_group_name = azurerm_resource_group.RG1
+  location = "West Europe"
+  account_replication_type = "LRS"
+  account_tier = "Standard"
+}
+
