@@ -21,7 +21,7 @@ resource "azurerm_resource_group" "RG1" {
 }
 
 resource "azurerm_storage_account" "SG1" {
-  name = "DevOps-SG"
+  name = "devopsstorageaccount"
   resource_group_name = "DevOps-Test-RG"
   location = "West Europe"
   account_replication_type = "LRS"
